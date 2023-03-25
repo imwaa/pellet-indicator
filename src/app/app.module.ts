@@ -9,13 +9,16 @@ import {AppRoutingModule} from './app-routing.module';
 import {AngularFireDatabaseModule} from "@angular/fire/compat/database";
 import {environment} from "../environments/environment";
 import {AngularFireModule} from "@angular/fire/compat";
-import {GaugeModule} from "angular-gauge";
 
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [AppComponent],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFireDatabaseModule,GaugeModule.forRoot()],
+  imports: [
+    BrowserModule,
+    IonicModule.forRoot(),
+    AppRoutingModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireDatabaseModule],
   providers: [{provide: RouteReuseStrategy, useClass: IonicRouteStrategy}],
 })
 export class AppModule {

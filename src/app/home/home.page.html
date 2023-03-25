@@ -1,21 +1,24 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Niveau de pellets
+      Pellets-Meter
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <div id="container">
-    <mwl-gauge
-      [max]="100"
-      [dialStartAngle]="180"
-      [dialEndAngle]="0"
-      [value]=data
-      [animated]="true"
-      [animationDuration]="2"
+    <ngx-gauge
+               [value]="data"
+               [size]="gaugeSize"
+               [label]="gaugeLabel"
+               [append]="gaugeAppendText"
+               [thick]="gaugleThick"
+               cap="round"
+               [markers]="markerConfig"
+               [thresholds]="thresholdConfig"
     >
-    </mwl-gauge>
+    </ngx-gauge>
+
   </div>
 </ion-content>
