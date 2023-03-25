@@ -1,0 +1,7 @@
+{
+  "name": "pellet-indicator",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
